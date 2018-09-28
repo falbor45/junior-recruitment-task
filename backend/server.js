@@ -63,6 +63,18 @@ app.route('/to-do-list/backend/task-list')
       }
       return res.status(200).send(todo);
     })
+  })
+  .delete(function (req, res) {
+    Todo.findByIdAndRemove(req.query.todoId, function (err, todo) {
+      if (err) {
+        return res.status(500).send(err);
+      }
+      const message = {
+        content: "Todo task successfully deleted!",
+        id: todo._id
+      };
+      return res.status(200).send(message);
+    })
   });
 
 app.listen(port, function () {
