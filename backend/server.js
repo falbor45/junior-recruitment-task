@@ -12,7 +12,6 @@ const mongoDB = 'mongodb://testuser:test123@ds115353.mlab.com:15353/to-do-junior
 
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 let db = mongoose.connection;
-// db.dropDatabase()
 db.on('error', console.error.bind(console, 'Connection error!'));
 db.once('open', function () {
 
