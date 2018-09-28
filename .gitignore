@@ -1,0 +1,5 @@
+# WebStorm's .idea dir
+.idea
+
+# node_modules dir
+node_modules
