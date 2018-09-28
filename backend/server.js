@@ -30,9 +30,9 @@ app.route('/to-do-list/backend/task-list')
   .get(function (req, res) {
     Todo.find({}).exec(function (err, taskList) {
       if (err) {
-        console.log(err)
+        res.status(500).send(err)
       }
-      res.send(taskList);
+      res.status(200).send(taskList);
     })
   });
 
