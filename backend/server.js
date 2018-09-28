@@ -34,7 +34,7 @@ app.route('/to-do-list/backend/task-list')
   .get(function (req, res) {
     Todo.find({}).exec(function (err, taskList) {
       if (err) {
-        return res.status(500).send(err)
+        return res.status(500).send(err);
       }
       return res.status(200).send(taskList);
     })
@@ -50,6 +50,18 @@ app.route('/to-do-list/backend/task-list')
         return res.status(500).send(err);
       }
       return res.status(200).send(freshTodo);
+    });
+  })
+  .put(function (req, res) {
+    if (typeof req.body.content !== "string") {
+      return res.status(400).send("Task content must be of String type!");
+    }
+
+    Todo.findByIdAndUpdate(req.query.todoId, req.body, { new: true }, function (err, todo) {
+      if (err) {
+        return res.status(500).send(err);
+      }
+      return res.status(200).send(todo);
     })
   });
 
