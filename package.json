@@ -18,7 +18,8 @@
   "homepage": "https://github.com/falbor45/junior-recruitment-task#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "mongodb": "^3.1.6"
+    "mongodb": "^3.1.6",
+    "mongoose": "^5.2.18"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
