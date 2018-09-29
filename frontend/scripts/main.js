@@ -3,9 +3,12 @@ class toDoList {
    this.mainNode = document.getElementById('root');
    this.createMainNodeHeader();
    this.todos = [];
-    this.fetchTodos();
+   this.fetchTodos();
   }
 
+  /**
+   * This function creates an app header.
+   */
   createMainNodeHeader() {
     this.mainNode.innerHTML = `
       <div class="header">
@@ -14,6 +17,10 @@ class toDoList {
       </div>`;
   }
 
+  /**
+   * This function fetches todos from the server and puts them
+   * into 'todos' variable.
+   */
   fetchTodos() {
     fetch(`http://localhost:3000/to-do-list/backend/task-list`)
       .then(response => response.json())
