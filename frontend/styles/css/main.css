@@ -26,4 +26,42 @@
   font-size: 14px;
   color: #dae4eb; }
 
+.input-container {
+  position: relative;
+  height: 29px;
+  width: 320px;
+  border-bottom: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb; }
+  .input-container input {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 80%;
+    border: none;
+    outline: none; }
+
+.input-container:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  top: 29px;
+  right: 0;
+  left: 0;
+  background-color: #e6ebed; }
+
+.add-btn {
+  display: inline-block;
+  width: 28px;
+  height: 100%;
+  background: center no-repeat url("../../assets/add-btn.png"); }
+
+.input-margin {
+  display: inline-block;
+  height: 100%;
+  width: 5px;
+  border-right: 1px solid #f2e3df;
+  border-left: 1px solid #f2e3df; }
+
 /*# sourceMappingURL=main.css.map */
