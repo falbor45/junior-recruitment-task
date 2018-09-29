@@ -116,7 +116,27 @@ class toDoList {
 
     const content = document.createElement('p');
     content.classList.add('content', todoCopy.finished ? 'crossed' : 'content');
+    content.setAttribute('contenteditable', true);
     content.innerText = todoCopy.content;
+
+    content.addEventListener('focusout', () => {
+      todoCopy.content = content.innerText;
+      const options = {
+        method: "PUT",
+        body: JSON.stringify(todoCopy),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      };
+
+      fetch(`http://localhost:3000/to-do-list/backend/task-list?todoId=${todoCopy._id}`, options)
+        .then(response => response.json())
+        .then(json => {
+          this.todos = json;
+        })
+        .then(() => this.fetchTodos())
+        .catch(err => console.log(err));
+    });
 
     const trashButton = document.createElement('div');
     trashButton.classList.add('trash-btn', todoCopy.finished ? 'grey' : 'black');
