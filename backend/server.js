@@ -28,6 +28,7 @@ let Todo = mongoose.model('Todo', todoSchema);
 app.use('/to-do-list/backend', function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
   console.log(`Time: ${new Date()}`);
   next();
 });
