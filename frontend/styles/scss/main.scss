@@ -74,3 +74,66 @@
   border-right: 1px solid $task-margin;
   border-left: 1px solid $task-margin;
 }
+
+.todo {
+  position: relative;
+  width: 320px;
+  height: 30px;
+  border-bottom: 1px solid $task-border;
+  border-left: 1px solid $app-border;
+  border-right: 1px solid $app-border;
+}
+
+.check-btn {
+  display: inline-block;
+  width: 28px;
+  height: 29px;
+}
+
+.finished {
+  background: center no-repeat url('../../assets/finished-box.png');
+}
+
+.unfinished {
+  background: center no-repeat url('../../assets/unfinished-box.png');
+}
+
+.todo-margin {
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  border-left: 1px solid $task-margin;
+  border-right: 1px solid $task-margin;
+}
+
+.content {
+  position: absolute;
+  max-width: 75%;
+  top: 50%;
+  left: 40px;
+  transform: translate(0, -50%);
+  color: $unfinished-task;
+  overflow-x: hidden;
+}
+
+.trash-btn {
+  position: absolute;
+  width: 11px;
+  height: 12px;
+  right: 12px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.black {
+  background: center no-repeat url('../../assets/trashcan-black.png');
+}
+
+.grey {
+  background: center no-repeat url('../../assets/trashcan-grey.png')
+}
+
+.crossed {
+  text-decoration: line-through;
+  color: $finished-task;
+}

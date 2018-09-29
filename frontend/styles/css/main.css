@@ -64,4 +64,57 @@
   border-right: 1px solid #f2e3df;
   border-left: 1px solid #f2e3df; }
 
+.todo {
+  position: relative;
+  width: 320px;
+  height: 30px;
+  border-bottom: 1px solid #e6ebed;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb; }
+
+.check-btn {
+  display: inline-block;
+  width: 28px;
+  height: 29px; }
+
+.finished {
+  background: center no-repeat url("../../assets/finished-box.png"); }
+
+.unfinished {
+  background: center no-repeat url("../../assets/unfinished-box.png"); }
+
+.todo-margin {
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  border-left: 1px solid #f2e3df;
+  border-right: 1px solid #f2e3df; }
+
+.content {
+  position: absolute;
+  max-width: 75%;
+  top: 50%;
+  left: 40px;
+  transform: translate(0, -50%);
+  color: #2e3641;
+  overflow-x: hidden; }
+
+.trash-btn {
+  position: absolute;
+  width: 11px;
+  height: 12px;
+  right: 12px;
+  top: 50%;
+  transform: translate(0, -50%); }
+
+.black {
+  background: center no-repeat url("../../assets/trashcan-black.png"); }
+
+.grey {
+  background: center no-repeat url("../../assets/trashcan-grey.png"); }
+
+.crossed {
+  text-decoration: line-through;
+  color: #9eb2c0; }
+
 /*# sourceMappingURL=main.css.map */
