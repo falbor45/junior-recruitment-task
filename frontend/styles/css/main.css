@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif; }
+
+.header {
+  position: relative;
+  height: 36px;
+  width: 320px;
+  background-color: #2e3641; }
+
+.header-margin {
+  height: 100%;
+  width: 5px;
+  margin-left: 29px;
+  border-left: 1px solid #454f5c;
+  border-right: 1px solid #454f5c; }
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 43px;
+  transform: translate(0, -50%);
+  font-size: 14px;
+  color: #dae4eb; }
+
+/*# sourceMappingURL=main.css.map */
