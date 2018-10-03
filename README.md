@@ -1,8 +1,8 @@
 ## Launching
-  - Install packages with npm: (npm i)
+  - Install packages with npm: (`npm i`)
   - Launch application with a command:
-  - (npm run launchWin) for Windows users
-  - (npm run launchDar) for Darwin users
+  - (`npm run launchWin`) for Windows users
+  - (`npm run launchDar`) for Darwin users
 
 # Zadanie dla Junior Developera
 
