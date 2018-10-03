@@ -49,6 +49,11 @@ app.route('/to-do-list/backend/task-list')
     if (typeof req.body.content !== "string") {
       return res.status(400).send("Task content must be of String type!");
     }
+
+    if (req.body.content === "") {
+      return res.status(400).send("Task content must not be empty!")
+    }
+
     let freshTodo = new Todo({content: req.body.content, finished: false});
 
     freshTodo.save(function (err) {
@@ -61,6 +66,10 @@ app.route('/to-do-list/backend/task-list')
   .put(function (req, res) {
     if (typeof req.body.content !== "string") {
       return res.status(400).send("Task content must be of String type!");
+    }
+
+    if (req.body.content === "") {
+      return res.status(400).send("Task content must not be empty!");
     }
 
     Todo.findByIdAndUpdate(req.query.todoId, req.body, { new: true }, function (err, todo) {

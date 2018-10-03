@@ -46,6 +46,10 @@
       addButton.classList.add('add-btn');
 
       addButton.addEventListener('click', () => {
+        if (inputNode.value === "") {
+          inputNode.placeholder = "Task content cannot be empty!";
+          return null;
+        }
         const data = {
           content: inputNode.value
         };
@@ -63,6 +67,7 @@
           .then(() => this.fetchTodos())
           .catch(err => console.log(err));
 
+        inputNode.placeholder = "";
         inputNode.value = "";
       });
 
