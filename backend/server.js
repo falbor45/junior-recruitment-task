@@ -6,6 +6,9 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+app.use('/to-do-list/frontend', express.static('frontend'))
+
 const port = 3000;
 
 const mongoDB = 'mongodb://testuser:test123@ds115353.mlab.com:15353/to-do-junior-recruitment-task';
