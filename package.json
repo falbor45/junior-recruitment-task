@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "launchWin": "concurrently \"nodemon ./backend/server.js\" \"start http://localhost:3000/to-do-list/frontend\"",
-    "launchDar": "concurrently \"nodemon ./backend/server.js\" \"open http://localhost:3000/to-do-list/frontend\"",
+    "launchDar": "concurrently \"nodemon ./backend/server.js\" \"open http://localhost:3000/to-do-list/frontend\""
   },
   "repository": {
     "type": "git",
