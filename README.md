@@ -1,3 +1,9 @@
+## Launching
+  - Install packages with npm: (npm i)
+  - Launch application with a command:
+  - (npm run launchWin) for Windows users
+  - (npm run launchDar) for Darwin users
+
 # Zadanie dla Junior Developera
 
 Realizacja prostej listy ToDo (lista zadań do zrobienia) jako aplikacji internetowej, z wykorzystaniem HTML5 po stronie frontendu i dowolnej technologi po stronie backendu. Aplikacja umożliwia dodawanie, przeglądanie i oznaczanie jako wykonane różnych zadań.
