@@ -4,7 +4,8 @@
   "description": "Simple To-do list web app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "launchWin": "concurrently \"nodemon ./backend/server.js\" \"start http://localhost:3000/to-do-list/frontend\"",
+    "launchDar": "concurrently \"nodemon ./backend/server.js\" \"open http://localhost:3000/to-do-list/frontend\"",
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "mongoose": "^5.2.18"
   },
   "devDependencies": {
+    "concurrently": "^4.0.1",
     "nodemon": "^1.18.4"
   }
 }
